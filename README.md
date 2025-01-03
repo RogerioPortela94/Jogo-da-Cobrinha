@@ -5,5 +5,5 @@
 
 ## Screenshot
 
-<img src="https://github.com/RogerioPortela94/Lista-de-tarefas-com-REACT/blob/main/Screenshot/image.png?raw=true">
+<img src="https://github.com/RogerioPortela94/Jogo-da-Cobrinha/blob/main/Screenshot/cobrinha01.png">
 
