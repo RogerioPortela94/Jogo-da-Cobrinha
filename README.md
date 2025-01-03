@@ -1,7 +1,7 @@
 # Jogo da Cobrinha v1
  Testando habilidades com JavaScript (Projeto não concluido)
  
- <a href="https://lista-de-tarefas-react-rp94.netlify.app">Jogue Aqui</a>
+ <a href="https://jogodacobrinha-rp94.netlify.app/">Jogue Aqui</a>
 
 ## Screenshot
 
