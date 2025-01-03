@@ -57,8 +57,8 @@ function checkCollision() {
 
     // Colisão com bordas
     if (head.x < 0 || head.x >= canvas.width || head.y < 0 || head.y >= canvas.height) {
-        //alert('Game Over! Pontuação: ${score}');
-        //resetGame();
+        alert('Game Over! Pontuação: ${score}');
+        resetGame();
     }
 
     // Colisão com o próprio corpo
