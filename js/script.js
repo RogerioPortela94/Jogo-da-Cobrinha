@@ -1,5 +1,8 @@
 const canvas = document.getElementById("jogoCanvas");
 const ctx = canvas.getContext("2d");
+const menu = document.getElementById("menu");
+const iniciar = document.getElementById("btnIniciar");
+const scoreDisplay = document.getElementById("scoreDisplay"); 
 
 // Configurações do jogo
 const box = 20;
@@ -46,6 +49,7 @@ function movimentoCobra() {
     // Verifica se comeu a comida
     if (cabeca.x === comida.x && cabeca.y === comida.y) {
         score++;
+        document.getElementById("pontuacao").innerText = score;
         comida = { x: getRandomPosicao(), y: getRandomPosicao() }; // Reposiciona a comida
     } else {
         cobra.pop(); // Remove a cauda se não comer
@@ -77,6 +81,7 @@ function resetGame() {
     direcao = "RIGHT";
     comida = { x: getRandomPosicao(), y: getRandomPosicao() };
     score = 0;
+    document.getElementById("pontuacao").innerText = score;
 }
 
 // Atualiza a direção com base no teclado
@@ -114,5 +119,20 @@ function gameLoop() {
     setTimeout(gameLoop, 100);
 }
 
-// Inicia o jogo
-gameLoop();
+function startGame() {
+    //oculta menu
+    menu.style.display = "none";
+
+    //exibe score
+    scoreDisplay.style.display = "block";
+
+    //exibe jogo
+    canvas.style.display = "block";
+
+    // Inicia o jogo
+    gameLoop();
+}
+
+iniciar.addEventListener("click", startGame);
+
+
