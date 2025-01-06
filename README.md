@@ -8,6 +8,8 @@
 # v2
  - Pause
  - Menu Inicial
+ - Dificuldades
+ - Instruções
  
  <a href="https://jogodacobrinha-rp94.netlify.app/">Jogue Aqui</a>
 

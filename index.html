@@ -7,9 +7,25 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <h1>Jogo da Cobrinha</h1>
+    <h1>Jogo da Cobrinha v2</h1>
     <div id="menu">
+        <label for="dificuldade">Nível de Dificuldade:</label>
+        <select id="dificuldade">
+            <option value="150">Fácil</option>
+            <option value="100" selected>Médio</option>
+            <option value="50">Difícil</option>
+        </select>
+        <button id="btnInstrucoes">Instruções</button>
         <button id="btnIniciar">Iniciar Jogo</button>
+    </div>
+    <div id="instrucoes" style="display: none;">
+        <h2>Instruções</h2>
+        <p>- Coma a comida vermelha para ganhar pontos.</p>
+        <p>- Evite colidir com as paredes ou com você mesmo.</p>
+        <h2>Controles</h2>
+        <p>- Use as setas do teclado para mover a cobra.</p>
+        <p>- Use a tecla espaço para pausar.</p>
+        <button id="btnVoltar">Voltar</button>
     </div>
     <p id="scoreDisplay" style="display: none;">Pontuação: <b id="pontuacao">0</b></p>
     <canvas id="jogoCanvas" style="display: none;"></canvas>

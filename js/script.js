@@ -1,8 +1,17 @@
+//Canvas
 const canvas = document.getElementById("jogoCanvas");
 const ctx = canvas.getContext("2d");
+
+//Display
 const menu = document.getElementById("menu");
-const iniciar = document.getElementById("btnIniciar");
 const scoreDisplay = document.getElementById("scoreDisplay"); 
+const instrucoes = document.getElementById("instrucoes");
+
+//Botões
+const iniciar = document.getElementById("btnIniciar");
+const btnInstrucoes = document.getElementById("btnInstrucoes");
+const voltar = document.getElementById("btnVoltar");
+const dificuldade = document.getElementById("dificuldade");
 
 // Configurações do jogo
 const box = 20;
@@ -15,6 +24,7 @@ let direcao = "RIGHT";
 let comida = { x: getRandomPosicao(), y: getRandomPosicao() };
 let score = 0;
 let isPause = false;
+let velocidade = 100;
 
 // Gera uma posição aleatória dentro do canvas
 function getRandomPosicao() {
@@ -116,10 +126,13 @@ function gameLoop() {
         checkColisao();
     }
     pauseMensagem();
-    setTimeout(gameLoop, 100);
+    setTimeout(gameLoop, velocidade);
 }
 
 function startGame() {
+    // Define a velocidade com base na dificuldade
+    velocidade = parseInt(dificuldade.value); 
+    
     //oculta menu
     menu.style.display = "none";
 
@@ -128,10 +141,22 @@ function startGame() {
 
     //exibe jogo
     canvas.style.display = "block";
-
+    
     // Inicia o jogo
     gameLoop();
 }
+
+// Exibe o menu de instruções
+btnInstrucoes.addEventListener("click", () => {
+    menu.style.display = "none";
+    instrucoes.style.display = "flex";
+});
+
+// Volta para o menu principal
+voltar.addEventListener("click", () => {
+    instrucoes.style.display = "none";
+    menu.style.display = "flex";
+});
 
 iniciar.addEventListener("click", startGame);
 
