@@ -4,7 +4,7 @@ const ctx = canvas.getContext("2d");
 
 //Display
 const menu = document.getElementById("menu");
-const scoreDisplay = document.getElementById("scoreDisplay"); 
+const scoreDisplay = document.getElementById("scoreDisplay");
 const instrucoes = document.getElementById("instrucoes");
 
 //Botões
@@ -132,7 +132,7 @@ function gameLoop() {
 function startGame() {
     // Define a velocidade com base na dificuldade
     velocidade = parseInt(dificuldade.value); 
-    
+ 
     //oculta menu
     menu.style.display = "none";
 
@@ -141,9 +141,14 @@ function startGame() {
 
     //exibe jogo
     canvas.style.display = "block";
-    
+
     // Inicia o jogo
     gameLoop();
+}
+
+function menuPrincipal(){
+    instrucoes.style.display = "none";
+    menu.style.display = "flex";
 }
 
 // Exibe o menu de instruções
@@ -153,10 +158,8 @@ btnInstrucoes.addEventListener("click", () => {
 });
 
 // Volta para o menu principal
-voltar.addEventListener("click", () => {
-    instrucoes.style.display = "none";
-    menu.style.display = "flex";
-});
+voltar.addEventListener("click", () => { menuPrincipal(); });
+
 
 iniciar.addEventListener("click", startGame);
 
