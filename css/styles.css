@@ -1,6 +1,104 @@
-#jogoCanvas {
-    border: 2px solid #333;
-    background-color: #fff;
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #222;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.menu,
+.game-over {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
+    display: none;
+}
+
+canvas {
+    background-color: black;
+    margin: 1px auto;
     display: block;
-    margin: 0 auto;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    width: 150px;
+}
+
+.easy {
+    background-color: green;
+    color: white;
+}
+
+.medium {
+    background-color: orange;
+    color: white;
+}
+
+.hard {
+    background-color: red;
+    color: white;
+}
+
+.restart {
+    background-color: blue;
+    color: white;
+}
+
+#controls {
+    display: none;
+    margin-top: 20px;
+}
+
+.controls-container {
+    display: grid;
+    grid-template-columns: repeat(3, 60px);
+    gap: 5px;
+    justify-content: center;
+}
+
+#btnUp {
+    grid-column: 2;
+}
+
+#btnLeft {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+#btnRight {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+#btnDown {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.control-button {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    border-radius: 50%;
+    background-color: gray;
+    color: white;
+    border: none;
 }

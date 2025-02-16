@@ -1,12 +1,12 @@
 # Jogo da Cobrinha 
-    Testando habilidades com JavaScript (Projeto não concluido)
+    Testando habilidades com JavaScript
 # v1
  - movimentos com teclado
  - Fundamentos inicias do jogo
  - Game Over
  - Score
+
 # v2
- - Pause
  - Menu Inicial
  - Dificuldades
  - Instruções
